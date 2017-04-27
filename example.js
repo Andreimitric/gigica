@@ -20,9 +20,9 @@ bot.on("message", function(user, userID, channelID, message, event) {
 	console.log("----------");
 
 	if (message === "%help") {
-		sendMessages(channelID, ["**Use my commands:**"]);
-		sendMessages(channelID, ["**FUN:** %ping,  %gigicaboss, %lol, %wtf, %thuglife, %boom"]);
-		sendMessages(channelID, ["**INFO:** %developer"]);//Sending a message with our helper function
+		sendMessages(channelID, ["**FUN:** %ping,  %gigicaboss, %lol, %wtf, %thuglife, %boom, %hug @mention @mention"]);
+		sendMessages(channelID, ["**INFO:** %developer"]);
+		sendMessages(channelID, ["**BOT INVITE:** %invite"]);//Sending a message with our helper function
 	} else if (message === "picaefeafeafeafeafture") {
 		sendFiles(channelID, ["fillsquare.png"]); //Sending a file with our helper function
 	}
@@ -30,6 +30,15 @@ bot.on("message", function(user, userID, channelID, message, event) {
 	if (message === "%ping") {
 		sendMessages(channelID, ["Pong"]); //Sending a message with our helper function
 	} else if (message === "pictureaefeafeafeafeaf") {
+		sendFiles(channelID, ["fillsquare.png"]); //Sending a file with our helper function
+	}
+
+	if (message.startsWith("%hug")) {
+    if (event.d.mentions.length > 1) {
+        sendMessages(channelID, ["https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif"]);
+    }
+} //Sending a message with our helper function
+	 else if (message === "pictuaeefreaefaefeafeeafeafeafeaf") {
 		sendFiles(channelID, ["fillsquare.png"]); //Sending a file with our helper function
 	}
 
@@ -53,6 +62,12 @@ bot.on("message", function(user, userID, channelID, message, event) {
 
 	if (message === "%boom") {
 		sendMessages(channelID, ["https://media.giphy.com/media/LrN9NbJNp9SWQ/giphy.gif"]); //Sending a message with our helper function
+	} else if (message === "picaefaefeafaefeature") {
+		sendFiles(channelID, ["fillsquare.png"]); //Sending a file with our helper function
+	}
+
+	if (message === "%invite") {
+		sendMessages(channelID, ["https://discordapp.com/api/oauth2/authorize?client_id=306487699651690496&scope=bot&permissions=0"]); //Sending a message with our helper function
 	} else if (message === "picaefaefeafaefeature") {
 		sendFiles(channelID, ["fillsquare.png"]); //Sending a file with our helper function
 	}
